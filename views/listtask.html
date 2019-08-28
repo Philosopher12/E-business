@@ -1,0 +1,85 @@
+<!-- <html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1> Tasks at hand</h1>
+    <hr>
+        <table>
+            <tr>
+                <td>Task name</td>
+                <td>Task Due</td>
+                <td>Task Description</td>
+            </tr>
+            <% for (var i =0;i< db.length;i++){ %>
+                <tr> 
+                    <td> 
+                        <%= db[i].taskname %>
+                    </td>
+                </tr>
+
+            <% }%>
+            <!-- <% for (var i =0; i< db.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= db[i].taskname %>
+                    </td>
+                    <td>
+                        <%= db[i].taskdue %>
+                    </td>
+                    <td>
+                        <%= db[i].taskdesc %>
+                    </td>
+                </tr>
+                <% }%> -->
+        <!-- </table>
+</body>
+
+</html> -->
+
+<!doctype html>
+<html>
+    <head>
+            <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>All tasks...</h1>
+        <div class="navDiv">
+            <h3><a href="/"> Home </a> ←|█|→ <a href="newtask"> Add a new Task </a></h3>
+        </div>
+        <hr>
+        <div class="pageDiv">
+            <div class="img-div">
+                    <img src = "spidey.png" style="width: 250px;">
+            </div>
+
+            <div class="actionDiv">
+                    <table>
+                            <tr>
+                                <td>Name</td>
+                                <td>Due Date</td>
+                                <td>Description</td>
+                            </tr>
+                            <% for ( var i =0; i< db.length;i++){ %>
+                                <tr>
+                                    <td>
+                                        <%= db[i].taskname %>
+                                    </td>
+                                    <td>
+                                        <%= db[i].taskdue %>
+                                    </td>
+                                    <td>
+                                        <%= db[i].taskdesc %>
+                                    </td>
+                                </tr>
+                                <% }%>
+                    </table>
+            </div>
+        </div>
+        
+        
+    </body>
+</html>

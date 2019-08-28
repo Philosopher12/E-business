@@ -1,0 +1,11 @@
+nav {
+    width: 100%;
+    background-image: url("../spidey.png");
+    display: flex;
+}
+body {
+    background-color: blueviolet;
+}
+table,th,td {
+    border: 1px solid black;
+}
