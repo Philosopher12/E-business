@@ -21,7 +21,7 @@
                 </tr>
 
             <% }%>
-            <!-- <% for (var i =0; i< db.length;i++){ %>
+            <% for (var i =0; i< db.length;i++){ %>
                 <tr>
                     <td>
                         <%= db[i].taskname %>
@@ -33,8 +33,8 @@
                         <%= db[i].taskdesc %>
                     </td>
                 </tr>
-                <% }%> -->
-        <!-- </table>
+                <% }%>
+        < </table>
 </body>
 
 </html> -->
@@ -47,21 +47,14 @@
 
     <body>
         <h1>All tasks...</h1>
-        <div class="navDiv">
-            <h3><a href="/"> Home </a> ←|█|→ <a href="newtask"> Add a new Task </a></h3>
-        </div>
-        <hr>
-        <div class="pageDiv">
-            <div class="img-div">
-                    <img src = "spidey.png" style="width: 250px;">
-            </div>
-
-            <div class="actionDiv">
+            <div >
+                    <img src = "spidey.png" width=1050px, height=150px;>
+           
                     <table>
                             <tr>
-                                <td>Name</td>
-                                <td>Due Date</td>
-                                <td>Description</td>
+                                <td>Task Name</td>
+                                <td>Task DueDate</td>
+                                <td>Task Description</td>
                             </tr>
                             <% for ( var i =0; i< db.length;i++){ %>
                                 <tr>
@@ -78,7 +71,7 @@
                                 <% }%>
                     </table>
             </div>
-        </div>
+        
         
         
     </body>

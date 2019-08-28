@@ -4,8 +4,35 @@ nav {
     display: flex;
 }
 body {
-    background-color: blueviolet;
+    background-color: rgb(187, 150, 223);
 }
 table,th,td {
     border: 1px solid black;
 }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  a:link, a:visited {
+    background-color: #91160e;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    
+  }
+  
+  a:hover, a:active {
+    background-color: rgb(126, 11, 11);
+  }
+  .center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(187, 150, 223);
+    padding: 10px;
+  }
