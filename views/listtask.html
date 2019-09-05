@@ -1,43 +1,3 @@
-<!-- <html>
-
-<head>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <h1> Tasks at hand</h1>
-    <hr>
-        <table>
-            <tr>
-                <td>Task name</td>
-                <td>Task Due</td>
-                <td>Task Description</td>
-            </tr>
-            <% for (var i =0;i< db.length;i++){ %>
-                <tr> 
-                    <td> 
-                        <%= db[i].taskname %>
-                    </td>
-                </tr>
-
-            <% }%>
-            <% for (var i =0; i< db.length;i++){ %>
-                <tr>
-                    <td>
-                        <%= db[i].taskname %>
-                    </td>
-                    <td>
-                        <%= db[i].taskdue %>
-                    </td>
-                    <td>
-                        <%= db[i].taskdesc %>
-                    </td>
-                </tr>
-                <% }%>
-        < </table>
-</body>
-
-</html> -->
 
 <!doctype html>
 <html>
@@ -49,33 +9,48 @@
         <h1>View All Tasks!!!</h1>
         
             <div>
-                    <img src = "spidey.png" width=1050px, height=150px;>
+                    <img src = "spidey.png" width=550px, height=100px;>
                     <div class="center">
                         <a href="/"> Home </a> 
-                        <a href="newTask"> Add Task </a>
+                        <a href="newTask"> Add a new Task </a>
+                        <a href="/deletetask"> Delete a Task by ID </a>
+                        <a href="/deletecomptask"> Delete Completed Task </a>
+                        <a href="/taskstatus"> Task Status </a>
                     </div>
            
                     <table>
                             <tr>
+                                <td>Task ID</td>
                                 <td>Task Name</td>
+                                <td>Assign To</td>
                                 <td>Task DueDate</td>
+                                <td>Task Status</td>
                                 <td>Task Description</td>
                             </tr>
-                            <% for ( var i =0; i< db.length;i++){ %>
+                            <% for ( var i =0; i< tasksDb.length;i++){ %>
                                 <tr>
-                                    <td>
-                                        <%= db[i].taskname %>
-                                    </td>
-                                    <td>
-                                        <%= db[i].taskdue %>
-                                    </td>
-                                    <td>
-                                        <%= db[i].taskdesc %>
-                                    </td>
-                                </tr>
-                                <% }%>
+                                        <td>
+                                             <%= tasksDb[i].taskId %>
+                                                </td>
+                                        <td>
+                                            <%= tasksDb[i].taskname %>
+                                        </td>
+                                        <td>
+                                                <%= tasksDb[i].taskassignto %>
+                                            </td>
+                                        <td>
+                                            <%= tasksDb[i].taskduedate %>
+                                        </td>
+                                        <td>
+                                                <%= tasksDb[i].taskstatus %>
+                                            </td>
+                                        <td>
+                                            <%= tasksDb[i].taskdescription %>
+                                        </td>
+                                    </tr>
+                                    <% }%>
                     </table>
-            </div>
+        </div>
         
         
         

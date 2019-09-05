@@ -7,21 +7,29 @@
         <h1>View All Tasks!!!</h1>
         
         <div>
-                <img src = "spidey.png" width=1050px, height=150px;>
+                <img src = "spidey.png" width=550px, height=100px;>
                 <div class="center">
                     <a href="/"> Home </a> 
                     <a href="listtask"> List Task </a>
+                    <a href="/deletetask"> Delete Task by ID</a>
+                    <a href="deletecomptask">Delete Completed Tasks</a>
+                    <a href="/taskstatus"> Task Status </a>
                 </div>
 
 <form action="task" method="POST" id="taskform">
     <label> Task Name: </label> 
     <input type="text" name="taskname">
     <br>    
-    <label> Task Due: </label> 
-    <input type="text" name="taskdue">
+    <label> Task Assigned to: </label> 
+    <input type="text" name="taskassignto">
+    <label> Task Due Date: </label> 
+    <input type="text" name="taskduedate">
+    <br>
+    <label> Task Status: </label> 
+    <input type="text" name="taskstatus">
     <br>
     <label> Task Description: </label> 
-    <input type="text" name="taskdesc">
+    <input type="text" name="taskdescription">
     <br>
 </form>
 <button type="submit" name="submit" form="taskform">Create Task </button>

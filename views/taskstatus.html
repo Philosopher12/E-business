@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>Update Task By ID</h1>
+        
+        <div>
+                <img src = "spidey.png" width=150px, height=100px;>
+                <div class="center">
+                    <a href="/"> Home </a>
+                    <a href="/newTask"> Add Task </a> 
+                    <a href="listtask"> List Task </a>
+                    <a href="/deletetask"> Delete Task by ID</a>
+                    <a href="/deletecomptask"> Delete Completed Task </a>
+                </div>
+
+<table>
+    <tr>
+        <td>Task ID</td>
+        <td>Task Name</td>
+        <td>Assign To</td>
+        <td>Task DueDate</td>
+        <td>Task Status</td>
+        <td>Task Description</td>
+        
+    </tr>
+    <% for ( var i =0; i< tasksDb.length;i++){ %>
+        <tr>
+                <td>
+                     <%= tasksDb[i].taskId %>
+                        </td>
+                <td>
+                    <%= tasksDb[i].taskname %>
+                </td>
+                <td>
+                        <%= tasksDb[i].taskassignto %>
+                    </td>
+                <td>
+                    <%= tasksDb[i].taskduedate %>
+                </td>
+                <td>
+                        <%= tasksDb[i].taskstatus %>
+                    </td>
+                <td>
+                    <%= tasksDb[i].taskdescription %>
+                </td>
+            </tr>
+            <% }%>
+</table>
+<form action = "taskstatus" method = "POST" id ="taskstatus">
+    <label> Task ID</label><br>
+    <input type="number" name="taskId"><br>
+    <label> New Status</label><br>
+    <input type="text" name="taskstatus">
+
+<button type="submit" name="update" form="taskstatus">Update Task </button></form>
+</body>
+</html>
