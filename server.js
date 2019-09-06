@@ -53,7 +53,7 @@ MongoClient.connect(url, { useNewUrlParser: true },
 app.get('/', function (req, res) {
     res.sendFile(__dirname + '/views/home.html');
 });
-app.get('/newTask', function (req, res) {
+app.get('/newtask', function (req, res) {
     res.sendFile(__dirname + '/views/newTask.html');
 });
 //POST request: receive the details from the client and insert new document (i.e. object) to the collection (i.e. table)
